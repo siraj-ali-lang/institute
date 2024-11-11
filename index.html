@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institute</title>
+    <link rel="stylesheet" href="intitute.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!--header//////////////////////////////////////////////////////////-->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="icons/images/logo-new.jpg" alt="">
+            </div>
+            <nav class="menu">
+                <div class="head">
+                    <img src="icons/images/logo-new.jpg" alt="">
+                    <button class="close-menu-btn" type="button"></button>
+                </div>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li class="dropdown">
+                        <a href="#">حول</a>
+                        <i class="fa-solid fa-chevron-down"></i>
+                        <ul class="sub-menu">
+                            <li><a href="about-bransh.html"><span>نبذه عن المعهد</span></a></li>
+                            <li class="dropdown">
+                                <a href="#"><span>الجداول الدراسيه</span></a>
+                                <i class="fa-solid fa-chevron-left"></i>
+                                <ul class="sub-menu sub-menu-2">
+                                    <li><a href="specialities-table.html"><span>كل الجداول الدراسية</span></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="adminstration.html"><span>المكاتب</span></a></li>
+                            <li><a href="images-albom.html"><span>ألبوم الصور</span></a></li>
+                            <li><a href="#"><span>الهيكل التنظيمي</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">التسجيل والقبول</a></li>
+                    <li class="dropdown">
+                        <a href="#">الأقسام</a>
+                        <i class="fa-solid fa-chevron-down"></i>
+                        <ul class="sub-menu sub-menu-2">
+                            <li><a href="#"><span>قسم برمجة وتحليل نظم</span></a></li>
+                            <li><a href="#"><span>قسم العلوم الإداريه</span></a></li>
+                            <li><a href="#"><span>قسم المحاسبه</span></a></li>
+                            <li><a href="#"><span>قسم التمريض العام</span></a></li>
+                            <li><a href="#"><span>قسم المختبرات</span></a></li>
+                            
+                        </ul>
+                    </li>
+                    <li class="mod-text"><a href="adminstration.html">مكاتب الإداره</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <button class="icon-btn search-btn" type="button"><i class="fa-solid fa-search"></i></button>
+                
+                <button type="button" class="open-menu-btn">
+                    <img src="icons/icon/burger-menu.png" alt="">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="background-container">
+            
+    </div>
+    <!--about -------------------------section -->
+    <section class="about">
+           <div class="about-container">
+            
+            <div class="about-title">
+                
+                <div class="img">
+                    <img src="icons/images/logo-new.jpg" alt="">
+                </div>
+                <h3>نبذه عن المعهد</h3>
+            </div>
+            <div class="text">
+                <input type="checkbox" id="check">
+                <p>المعهد العالي للعلوم والتقنية\ بئر معتوق التابع لوزارة التعليم التقني والفني.</p>
+                <span>يعتبر المعهد العالي للعلوم والتقنيه احد أهم المؤسسات التعليمية في مستوى التعليم العالي يتبع وزارة التعليم التقني , ويعد انشاؤه خطوة ايجابية اتخذتها الدولة لضمان تامين قاعدة قوية لاعداد وتاهيل مهندسين قادرين على التعامل مع التطورات المستمرة في مختلف المجالات ومواكبة مستجدات العصر.</span>
+                <div class="content-check">
+                <span>حيث يختص بتخريج الاطر البشرية المؤهلة والمدربة بدرجة عالية معرفيا وتقنيا في ليبيا, وتتجسد وظيفته في احنضان وتنمية العلوم التقنية التطبيقية والفنية والقيام بتدريسها والتدريب العملي في فروعها التطبيقية بالوسائل المناسبة لاختصاص المعهد.</span>
+                <label id="hide" for="check">إزالة المزيد</label>
+                </div>
+                <label id="display" for="check">إقرأ المزيد</label>
+           </div>
+    </section>
+    <!--info section/////////////////////////////////////////-->
+    <section class="info" id="info">
+        <div class="container">
+            <div class="vision">
+               <h1><i class="fa-solid fa-circle"></i>الرؤية.</h1>
+               <p>-أن يكون المعهد مؤسسة تعليمية متميزه في أدائها وجودة برامجها تفي بتطلعات المجتمع المحلي والوطني, وتسهم في تحقيق توجهاته التنموية والتنافسية من خلال تقديم كوادر فنية وتقنية متميزه.</p>
+               <p>أن يكون المعهد مؤسسة تتميز بالتجدد والمرونه الكافيه لإستيعاب متغيرات العصر من خلال توفير بيئة متميزه للتعليم والتعلم والبحث العلمي وخدمة المجتمع.</p>
+            </div>
+            <div class="message">
+                <h1><i class="fa-solid fa-circle"></i>الرسالة.</h1>
+                <p>-يسعى المعهد لتحقيق التميز في التعليم التقني والفني والبحث العلمي و خدمة المجتمع و البيئه من خلال برامج تعليمية توعوية تسهم في تحقيق التنمية المستدامة, وإعداد خريجين متميزين وفق معايير الجودة المؤهلة للإعتماد والمنافسة في سوق العمل.</p>
+            </div>
+            <div class="targets">
+                <input type="checkbox" id="ch">
+                <h1><i class="fa-solid fa-circle"></i>الأهداف.</h1>
+                <p>-إعداد كوادر مهيئة ومدربة من خلال تعزيز وتطوير البرامج التعليمية لتتوافق مع متطلبات المعايير الوطنية للجوده والإعتماد.</p>
+                <p>-بناء القدرات التنافسية للطلبه وتمكينهم بالمعارف والكفاءات اللازمه للتميز العلمي والمهني وفق متطلبات سوق العمل ومجتمع المعرفة.</p>
+                <p>-الإهتمام بالتطبيق العملي لأغلب المقررات والتقييم المستمر لأداء الطالب.</p>
+                <div class="ch-content">
+                <p>-إستقطاب الكفاءات من أعضاء هيئة التدريس المميزين والسعي لتطوير أدائهم.</p>
+                <p>-الإرتقاء بالقيمة النوعية للبحث العلمي والإبتكالر وفقا لأولويات التنمية.</p>
+                <p>-تطوير الأداء المؤسسي والمنظومة الإدارية والوفاء بمتطلبات ضمان الجوده والتهيئة للإعتماد المؤسسي والبرامج.</p>
+                <p>-تعزيز المسؤولية والشراكة المجتمعية.</p>
+                <label id="hide-content" for="ch">إزالة المزيد</label>
+                </div>
+                <label id="display-content" for="ch">إقرأ المزيد</label>
+            </div>
+        </div>
+    </section>
+    <!--news-------------------------section-->
+    <section class="news" id="news">
+        <div class="heading-container">
+                <div class="heading">
+                    <h2 class="title">لمحة عن تفاعل الإداره مع الطلاب</h2>
+                </div>
+        </div>
+
+        <div class="news-row-container">
+            <div class="row r1">
+                <div class="img">
+                    <img src="icons/images/class-1.jpg" alt="">
+                </div>
+                <div class="text">
+                    <div class="align">
+                        <a class="a" href="">أكتوبر 1. 2024</a>
+                    </div>
+                    <div>
+                        <h2>صور من أرشيف التعامل بين المعلم والطالب.</h2>
+                        <button><a href="#">إقرأ المزيد <div class="fas fa-arrow-left"></div></a></button>
+                    </div>
+                </div>
+            </div>
+        
+
+        
+            <div class="row r2">
+                <div class="img">
+                    <img src="icons/images/class-2.jpg" alt="">
+                </div>
+                <div class="text">
+                    <div class="align">
+                        <a class="a" href="">أكتوبر 1. 2024</a>
+                    </div>
+                    <div>
+                        <h2>حضور الطلبة في بداية الفصل.</h2>
+                        <button><a href="#">إقرأ المزيد <div class="fas fa-arrow-left"></div></a></button>
+                    </div>
+                </div>
+            </div>
+        
+
+            <div class="row r3">
+                <div class="img">
+                    <img src="icons/images/class-3.jpg" alt="">
+                </div>
+                <div class="text">
+                    <div class="align">
+                        <a class="a" href="">أكتوبر 1. 2024</a>
+                    </div>
+                    <div>
+                        <h2>إملاء الإرشادات في بداية الفصل.</h2>
+                        <button><a href="#">إقرأ المزيد <div class="fas fa-arrow-left"></div></a></button>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </section>
+    <!--map map map map/////////////////////////////////////////////////-->
+    <section class="contact">
+        <div class="container">
+            <div class="map">
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13445.040686944034!2d13.473153!3d32.5992493!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13a8a776e3b3a359%3A0xc741063784503e9b!2z2KfZhNmF2LnZh9iv2KfZhNi52KfZhNmKINmE2YTYudmE2YjZhSDZiNin2YTYqtmC2YbZitipINio2KbYsSDZhdi52KrZiNmC!5e0!3m2!1sen!2sly!4v1729860935926!5m2!1sen!2sly" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="sign-in">
+                <div class="inputBox">
+                    <span class="fas fa-user"></span>
+                    <input type="text" placeholder="الإسم">
+                </div>
+
+                <div class="inputBox">
+                    <span class="fas fa-user"></span>
+                    <input type="text" placeholder="الحساب">
+                </div>
+
+                <div class="inputBox">
+                    <span class="fas fa-user"></span>
+                    <input type="text" placeholder="كلمة المرور">
+                </div>
+            </div>
+            <div class="button">
+                <button>تسجيل الدخول</button>
+            </div>
+        </div>
+    </section>
+    <!--foter-section/////////////////////////////////////////////-->
+    <section class="foter" id="foter">
+        <div class="container">
+            <div class="icons">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+            </div>
+
+            <div class="text">
+                <p>.All copy rights reserved, content presented misurata</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script src="institute.js"></script>
+</body>
+</html>

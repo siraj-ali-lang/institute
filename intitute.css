@@ -1,0 +1,1367 @@
+*{
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: Rubic;
+    text-decoration: none;
+    transition: .2s;
+}
+:root{
+    --btn-color:#3db166;
+    --text-color-b:#959fb2;
+    --about-div:#1e2d49;
+    --apply-div:#373737;
+    --sky-blue:#199bcf;
+}
+body{
+    padding-top: 100px;
+}
+.background-container{
+    height: 100vh;
+    width: 100%;
+    background-image: url(icons/images/background-pic.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+
+.header{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.2s);
+    z-index: 10;
+}
+.header .container{
+    max-width: 1170px;
+    margin: auto;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.header .logo img{
+    height: 70px;
+    vertical-align: middle;
+    margin-left: 40px;
+}
+
+.header .container .menu img{
+    height: 70px;
+}
+.header .menu .head{
+    display: none;
+}
+.header .menu ul{
+    list-style: none;
+}
+.header .container .menu ul li a{
+    font-size: 20px;  
+}
+.header .container .menu ul li a:hover{
+    color: var(--btn-color);
+}
+.header .container .menu ul li a span{
+    color: #fff;
+}
+.header .menu > ul > li{
+    display: inline-block;
+}
+.header .menu > ul > li:not(:last-child){
+    margin-right: 40px;
+}
+.header .menu a{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 16px;
+    color:black;
+    line-height: 1.5;
+    
+}
+.header .menu > ul > li > a{
+    padding: 24px 0;
+}
+.header .menu .dropdown{
+    position: relative;
+}
+.header .menu > ul > .dropdown >a{
+    padding-right: 15px;
+}
+.header menu i{
+    font-size: 10px;
+    pointer-events: none;
+    user-select: none;
+    position: absolute;
+    color: hsl(0, 0%, 100%);
+    top: calc(50% - 5px);
+}
+.header .menu > ul > li > i{
+    right: 0;
+}
+.header .menu .sub-menu{
+    position: absolute;
+    top: 100%;
+    right: 100%;
+    width: 230px;
+    padding: 15px 0;
+    background-color: hsl(229, 54%,51%);
+    box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.5);
+    z-index: 1;
+}
+.header .menu .sub-menu a{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 24px;
+}
+.header .menu .sub-menu i{
+    transform: rotate(-90deg);
+    right: 24px;
+}
+.header .menu .sub-menu span{
+    background-image: linear-gradient(hsl(0, 0%, 0%), hsl(0, 1%, 36%));
+    background-size: 0 1px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    transition: background-size 0.5s ease;
+}
+.header .menu .sub-menu li:hover > a > span{
+    background-size: 100% 2px;
+}
+.header .menu .sub-menu-right{
+    left: 100%;
+    top: 0;
+}
+.header .menu .sub-menu{
+    transform-origin: top;
+    transform: scaleY(0);
+    visibility: hidden;
+    opacity: 0;
+}
+.header .menu ul .dropdown .sub-menu .dropdown .sub-menu{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 230px;
+    padding: 15px 0;
+    background-color: hsl(229, 54%,51%);
+    box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.5);
+    z-index: 1;
+}
+.header .menu ul .dropdown .sub-menu .dropdown .sub-menu a{
+    padding: 15px 5px;
+}
+.header .menu li:hover > .sub-menu{
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+    transition: all 0.5s ease;
+}
+.header .menu .sub-menu-left{
+    top: o;
+    left: auto;
+    right: 100%;
+}
+.header-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.header-right > *{
+    margin-left: 25px;
+}
+.header-right .icon-btn{
+    background-color: hsl(0, 2%, 84%);;
+    border: none;
+    cursor: pointer;
+    color: black;
+    font-size: 20px;
+    margin-right: 50px;
+    padding: 7px 10px;
+    border-radius: 2px;
+}
+.header-right .open-menu-btn{
+    display: none;
+}
+.mod-text{
+    margin-right: 30px;
+}
+@media(max-width:991px){
+    .header .menu{
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 320px;
+        height: 100%;
+        background-color: hsl(229, 54%, 51%);
+        padding: 15px 30px 30px;
+        overflow-y: auto;
+        z-index: 1;
+        transform: translatex(100%);
+    }
+    .header{
+        padding: 12px 0;
+    }
+    .header .container .logo{
+        margin-left: 3rem;
+    }
+    .header .menu .head{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 25px;
+    }
+    .header .menu.open{
+        transform: none;
+    }
+    .header .menu .close-menu-btn{
+        height: 35px;
+        width: 35px;
+        position: relative;
+        display: inline-flex;
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+        align-items: center;
+        justify-content: center;
+    }
+    .header .menu .close-menu-btn::before,
+    .header .menu .close-menu-btn::after{
+        content: '';
+        position: absolute;
+        width: 80%;
+        height: 2px;
+        background-color: hsl(0, 0%, 100%);
+    }
+    .header .menu .close-menu-btn::before{
+        transform: rotate(45deg);
+    }
+    .header .menu .close-menu-btn::after{
+        transform: rotate(-45deg);
+    }
+    .header .menu > ul > li{
+        display: block;
+    }
+    .header .container .menu a{
+        color: white;
+        font-size: 23px;
+    }
+    .header .container .menu ul .dropdown .sub-menu{
+        right: 0;
+    }
+    .header .container .menu ul .dropdown .sub-menu a span:hover{
+        color: black;
+    }
+    .sub-menu-2{
+        background-color: black;
+    }
+    
+    .header .menu > ul > li:not(:last-child){
+        margin-right: 0;
+    }
+    .header .menu li{
+        border-bottom: 1px solid hsla(0, 0%, 100%, 0.25);
+    }
+    .header .menu li:first-child{
+        border-bottom: 1px solid hsla(0, 0%, 100%, 0.25);
+    }
+    .header .menu > ul > li > a{
+        padding: 12px 0;
+    }
+    .header .menu > ul > .dropdown > a{
+        padding-right: 0px;
+    }
+    .header .menu .dropdown i{
+        background-color: white;
+    }
+    
+    .header .menu .dropdown.active > i{
+        background-color: transparent;
+        transform: rotate(180deg);
+    }
+    .header .menu i{
+        height: 34px;
+        width: 34px;
+        border: 1px solid hsla(0, 0%, 100%, 0.25);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: auto;
+        cursor: pointer;
+        top: 7px;
+    }
+    .header .menu .sub-menu{
+        position: static;
+        opacity: 1;
+        transform: none;
+        visibility: visible;
+        padding: 0;
+        transition: none;
+        box-shadow: none;
+        width: 100%;
+        display: none;
+        
+    }
+    
+    .header .menu .dropdown.active > .sub-menu{
+        display: block;
+    }
+    .header .menu .sub-menu li:last-child{
+        border: none;
+    }
+    .header .menu .sub-menu a{
+        padding: 12px 0 12px 15px;
+    }
+    .header .menu .sub-menu .sub-menu a{
+        padding-left: 30px;
+    }
+    .header .menu .sub-menu .sub-menu .sub-menu a{
+        padding-left: 45px;
+    }
+    .header .menu .sub-menu span{
+        background-image: none;
+    }
+    .header .menu .sub-menu i{
+        transform: none;
+        right: 0;
+    }
+    .header-right .open-menu-btn img{
+        margin-right: 4rem;
+        height: 70px;
+    }
+    .header-right .open-menu-btn{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        width: 44px;
+        cursor: pointer;
+        position: relative;
+        background-color: transparent;
+        border: none;
+    }
+    .header-right .open-menu-btn .line{
+        height: 2px;
+        width: 30px;
+        background-color: hsl(0, 0%, 100%);
+        position: absolute;
+    }
+    .header-right .open-menu-btn .line-1{
+        transform: translateY(-8px);
+    }
+    .header-right .open-menu-btn .line-3{
+        transform: translateY(8px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    background-color: #fff;
+    box-shadow: 0 4px 41px rgb(14 55 54 / 14%);
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+.about-container{
+    
+    width: 100%;
+    background: var(--about-div);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-left: 40px;
+    padding-bottom: 25px;
+}
+.about-container .about-title{
+    flex: 1 1 20rem;
+}
+.about-container .text{
+    flex: 1 1 50rem;
+    padding-top: 53px;
+    margin-right: 25px;
+}
+.about-container .about-title .img{
+    padding: 20px 35px;
+    
+}
+.about-container .about-title .img img{
+    padding-top: 15px;
+    height: 250px;
+    border-radius: 60px;
+}
+.about-container .about-title h3{
+    padding-right: 38px;
+    font-weight: bolder;
+    font-size: 50px;
+    color: var(--btn-color);
+}
+.about-container .text p{
+    font-size: 26px;
+    padding-left: 1%;
+    padding-bottom: 30px;
+    color: #c2bdbd;
+    line-height: 35px;
+}
+.about-container .text span{
+    font-size: 23px;
+    color: #fff;
+    line-height: 32px; 
+}
+.about-container .text .more-info{
+    margin-top: 20px;
+}
+.about-container .text .more-info span a{
+    font-size: 21px;
+    color: var(--btn-color);
+    margin-top: 50px;
+}
+.about-container .text .more-info span a:hover{
+    color: #fff;
+    cursor: pointer;
+}
+/*about-check box//////////////////////about-check-box//////*/
+#check{
+    display: none;
+}
+label{
+    display: none;
+}
+
+/*info check box info check box/////////////////////////////////*/
+#ch{
+    display: none;
+}
+.info .container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 50px 12px;
+    background-color: rgb(224, 223, 223);
+
+}
+.info .container .vision{
+    flex: 1 1 20rem;
+}
+.info .container .message{
+    flex: 1 1 20rem;
+}
+.info .container .targets{
+    flex: 1 1 20rem;
+}
+.info .container h1{
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--sky-blue);
+}
+.info .container i{
+    font-size: 15px;
+    margin-left: 3px;
+    margin-top: 5px;
+}
+.info .container p{
+    font-size: 23px;
+    color: #313131;
+    margin-bottom: 13px;
+    
+}
+
+.title::before, .title::after{
+    content: "";
+    height: 2px;
+    background-color: #000;
+    display: block;
+}
+.heading-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.title{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    color: var(--btn-color);
+    gap: 2rem;
+}
+.news-row-container{
+    display: flex;
+    gap: 1rem;
+    padding-right: 30px;
+    padding-top: 35px; 
+    padding-left: 25px;
+    background-color: rgb(245, 245, 245);
+    margin-top: 50px;
+    padding-bottom: 50px;  
+}
+.news-row-container > *{
+    flex: 1;
+}
+.news-row-container .row{
+    width: 400px;
+}
+.news-row-container .row .a{
+    color: #a8a8a8;
+
+}
+
+
+.text .align{
+    text-align: center;
+    padding-left: 50px;
+}
+.row img{
+    
+    width: 100%;
+    border-radius: 8px;
+}
+.row .text div h2{
+    font-size: 21px;
+    color: rgb(25, 25, 54);
+    margin-top: 10px;
+    padding-right: 8px;
+}
+.row .text div button{
+    padding: 10px 25px;
+    background-color: var(--sky-blue);
+    border: none;
+    margin-right: 8px;
+}
+.row .text div button a{
+    color: #fff;
+    font-size: 18px;
+}
+.news-row-container .r1 h2, .r2 h2, .r3 h2{
+    margin-bottom: 24px;
+}
+.row .text div button:hover{
+    background-color: #3db166;
+    cursor: pointer;
+}
+
+.contact .container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background: rgb(221, 220, 220);
+    
+    
+}
+.contact .container .map{
+    flex: 1 1 20rem;
+    margin: px;
+    display: flex;
+    align-items: center;
+    
+    padding: 15px 15px;
+   
+}
+.contact .container .map iframe{
+    height: 50vh;
+   border-radius: 6px;
+   width: 100%;
+}
+.contact .container .sign-in{
+    flex: 1 1 25rem;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+   
+}
+.inputBox input{
+    width: 350px;
+    height: 60px;
+    margin-right: 5px;
+    
+}
+.inputBox span{
+    font-size: 30px;
+    color: #b6b1b1;
+    margin-right: 5px;
+}
+.contact .container .button{
+    flex: 1 1 23rem;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+}
+.contact .container .button button{
+    background-color: var(--sky-blue);
+    border: none;
+    padding: 9px 40px;
+    font-size: 29px;
+    border-radius: 4px; 
+    cursor: pointer;
+}
+input::-webkit-input-placeholder{
+    padding-right: 10px;
+    font-size: 20px;
+    border: none;
+}
+.contact .container .button button:hover{
+    background-color: var(--btn-color);
+    color: #fff;
+}
+
+
+.foter .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+    background-color: #202020;
+    padding: 0 40px;
+}
+.foter .container .icons i{
+    font-size: 25px;
+    margin-left: 30px;
+    color: var(--sky-blue);
+}
+.foter .container .icons i:hover{
+    color: #fff;
+    cursor: pointer;
+}
+.foter .container .text p{
+    text-transform: uppercase;
+    color: #d1cece;
+}
+/*list dropdown-------------------------------------dropdown*/
+
+header .navbar .dropdown{
+    position: relative;
+}
+header .navbar .dropdown .sub-menu{
+    position: absolute;
+    width: 180px;
+    background-color: #a8a8a8;
+    transform-origin: top;
+    visibility: hidden;
+    transform: scaleY(0);
+    margin-top: 8px;
+    
+}
+header .navbar  li:hover > .sub-menu{
+    visibility: visible;
+    transform: none;
+    opacity: 1;
+}
+header .navbar .dropdown .sub-menu a{
+    padding-top: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    
+}
+header .navbar .dropdown .sub-menu li{
+    padding: 10px;
+    border-bottom: 1px solid rgb(230, 227, 227);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    
+}
+header .navbar .dropdown .sub-menu li:hover{
+    background-color: #fff;
+    cursor: pointer;
+}
+header .navbar .dropdown .sub-menu .dropdown{
+    position: relative;
+    
+}
+header .navbar .dropdown .sub-menu .dropdown .sub-menu{
+    position: absolute;
+    right: 100%;
+    top: 0%;
+    width: 230px;
+}
+header .navbar .dropdown .sub-menu .dropdown .chevron{
+    margin-right: 10px;
+    padding-top: 3px;
+}
+header .navbar .dropdown .sub-menu2{
+    width: 210px;
+}
+/*branshes////////////////////branshes///////////////////*/
+.tables .container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    
+}
+.tables .container .table{
+    margin: 35px 10px;
+    margin-bottom: 50px;
+}
+.tables .container .table img{
+  height: 400px;
+}
+.tables .container .table h1{
+    text-align: center;
+}
+.adminstration .container{
+    background-image: url(icons/images/branch-background-img.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0rem;
+    padding: 35px 5px;
+    margin-top: 60px;
+}
+.adminstration h1{
+    text-align: center;
+    font-size: 27px;
+}
+.adminstration .container .row1{
+    flex: 1 1 30rem;
+    text-align: center;
+}
+.adminstration .container .row2{
+    flex: 1 1 30rem;
+    text-align: center;
+}
+.adminstration .container h3{
+    font-size: 23px;
+    line-height: 50px;
+    color: #fff;
+}
+.albom{
+    margin-top: 30px;
+}
+.albom .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background-color: rgb(245, 234, 234);
+}
+.albom h1{
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 27px;
+    color: rgb(41, 41, 41);
+}
+.albom .container img{
+    height: 230px;
+    margin-top: 8px;
+    border-radius: 7px;
+}
+.contact-us .container{
+    text-align: center;
+    margin: 30px 0;
+}
+.contact-us .container h2{
+    color: rgb(3, 68, 3);
+}
+.contact-us .container i{
+    color: rgb(62, 183, 231);
+    font-size: 30px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.contact-us .container i:hover{
+    color: green;
+}
+
+.albom-page .container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+
+}
+.albom-page h1{
+    text-align: center;
+    color: rgb(0, 0, 121);
+    margin: 30px 0;
+}
+.albom-page .container .row img{
+    height: 200px;
+    width: 100%;
+}
+.second-container .row{
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+gap: .5rem;
+margin-bottom: 30px;
+padding: 0 10px;
+}
+
+.second-container-title{
+    text-align: center;
+    margin: 30px 0;
+    color: rgb(0, 0, 121);
+}
+/*about-branshes////////////////////////////about-branshes*/
+.about-bransh .container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0rem;
+}
+@keyframes glow{
+    50%{box-shadow:0px 0px 50px blue}
+}
+@keyframes glom{
+    50%{box-shadow:0px 0px 50px green}
+}
+
+.about-bransh .container .image{
+    flex: 1 1 20rem;
+    height: 400px;
+    width: 600px;
+}
+.about-bransh .container .image:hover{
+    animation-name: glow;
+    animation-duration: 3s;
+}
+.about-bransh .container .image img{
+    height: 100%;
+    width: 80%;
+    margin-right: 4rem;
+    border-radius: 10px;
+}
+
+.about-bransh .container .text{
+    flex: 1 1 20rem;
+    text-align: center;
+    padding: 3rem 5rem;
+}
+.about-bransh .container:hover{
+    animation-name: glow;
+    animation-duration: 3s;
+}
+.about-bransh .container .text i{
+   font-size: 50px;
+   color: #868484;
+}
+.about-bransh .container .text h2{
+    margin-top: 1.5rem;
+    font-size: 34px;
+    color: #666262;
+}
+.about-bransh .container .text p{
+    font-size: 30px;
+    margin-top: 2rem;
+    line-height: 50px;
+    
+}
+/*bransh2222222222222222222222bransh2-2///////////////////////////////*/
+.bransh-2 .container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bransh-2 .container .image{
+    flex: 1 1 20rem;
+    height: 500px;
+    width: 600px;
+}
+
+.bransh-2 .container .image img{
+    height: 88%;
+    width: 88%;
+    margin-left: 1rem;
+    border-radius: 10px;
+    margin-top: 3rem;
+}
+.bransh-2 .container:hover{
+    animation-name: glom;
+    animation-duration: 3s;
+}
+.bransh-2 .container .image:hover{
+    animation-name: glom;
+    animation-duration: 3s;
+}
+
+.bransh-2 .container .text{
+    flex: 1 1 25rem;
+    text-align: center;
+    padding: 3rem 5rem;
+    
+}
+
+.bransh-2 .container .text i{
+   font-size: 50px;
+   color: #868484;
+}
+.bransh-2 .container .text h2{
+    margin-top: 1.5rem;
+    font-size: 34px;
+    color: #666262;
+}
+.bransh-2 .container .text p{
+    font-size: 23px;
+    margin-top: 2rem;
+    line-height: 35px;
+    padding-right: 2rem;
+}
+/*bransh333333333333//////////////////bransh3333333333*/
+.bransh-3 .container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0rem;
+    margin-top: 3rem;
+}
+
+.bransh-3 .container .image{
+    flex: 1 1 20rem;
+    height: 400px;
+    width: 600px;
+}
+.bransh-3 .container:hover{
+    animation-name: glow;
+    animation-duration: 3s;
+}
+.bransh-3 .container .image:hover{
+    animation-name: glow;
+    animation-duration: 3s;
+}
+.bransh-3 .container .image img{
+    height: 100%;
+    width: 80%;
+    margin-right: 4rem;
+    border-radius: 10px;
+}
+
+.bransh-3 .container .text{
+    flex: 1 1 20rem;
+    text-align: center;
+    padding: 0rem 5rem;
+}
+.bransh-3 .container .text i{
+   font-size: 50px;
+   color: #868484;
+}
+.bransh-3 .container .text h2{
+    margin-top: 1.5rem;
+    font-size: 34px;
+    color: #666262;
+}
+.bransh-3 .container .text li{
+    font-size: 22px;
+    margin-top: 0.8rem;
+    list-style: disc;
+    
+}
+/*bransh-contact//////////////////////////////////////////////*/
+.bransh-contact .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+    padding: 2rem 2rem;
+    background:#aaa5a5 ;
+    border-radius: 20px;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+.bransh-contact .container i{
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+.bransh-contact .container div:nth-child(1) i{
+    color: rgb(50, 130, 161);
+}
+.bransh-contact .container div:nth-child(1) i:hover{
+    color: rgb(75, 126, 16);
+    cursor: pointer;
+}
+.bransh-contact .container div:nth-child(2) i{
+    color: red;
+}
+.bransh-contact .container div:nth-child(3) i{
+    color: rgb(68, 67, 67);
+}
+.bransh-contact .container div:nth-child(2) i:hover{
+    color: rgb(75, 126, 16);
+    cursor: pointer;
+}
+.bransh-contact .container div:nth-child(3) i:hover{
+    color: rgb(75, 126, 16);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:620px){
+    .background-container{
+        height: 80vh;
+        width: 100%;
+        background-image: url(icons/images/background-pic.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+    }
+
+    .about-container .about-title .img{
+        padding: 20px 20px;
+        margin-right: 60px;
+        margin-top: 15px;
+        
+    }
+    .about-container .about-title .img img{
+        padding-top: 25px;
+        padding-right: 0rem;
+        height: 250px;
+        border-radius: 60px;
+    }
+    .about-container .about-title h3{
+        margin-right: 28px;
+        font-weight: bolder;
+        font-size: 50px;
+        color: var(--btn-color);
+        margin-top: 14px;
+    }
+    .about .text span{
+        display: block;
+    }
+    /*about-check box /////////////////////////////////check- about////////*/
+    .content-check{
+        display: none;
+    }
+    #check:checked ~ .content-check{
+        display: block;
+    }
+    
+    #check:checked ~ #display{
+        display: none;
+    }
+
+    /*info check-box check-box check-box//////////////////////////////*/
+    .ch-content{
+        display: none;
+    }
+    #ch:checked ~ .ch-content{
+        display: block;
+    }
+    
+    #ch:checked ~ #display-content{
+        display: none;
+    }
+    label{
+        background-color: var(--btn-color);
+        cursor: pointer;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 28px;
+        padding-right: 5px;
+        color: #fff;
+        margin-top: 13px;
+        font-size: 21px;
+        display: inline-block;
+        border-radius: 5px;
+    }
+    
+    .news-row-container{
+        display: flex;
+        flex-wrap: wrap;
+        
+        padding-right: 30px;
+        padding-top: 35px; 
+        
+        background-color: rgb(245, 245, 245);
+        margin-top: 50px;
+        padding-bottom: 50px;  
+    }
+    .news-row-container > *{
+        flex: 1 1 15rem;
+    }
+    .news-row-container .row .a{
+        color: #a8a8a8;
+    
+    }
+    .text .align a{
+        text-align: left;
+        padding-left: 50px;
+    }
+    .news-row-container .row{
+        width: 400px;
+    }
+    
+    .row img{
+       
+        width: 100%;
+        border-radius: 8px;
+    }
+    .row .text div h2{
+        font-size: 21px;
+        color: rgb(25, 25, 54);
+        margin-top: 10px;
+        padding-right: 8px;
+    }
+    .row .text div button{
+        padding: 10px 25px;
+        background-color: var(--sky-blue);
+        border: none;
+        margin-right: 8px;
+    }
+    .row .text div button a{
+        color: #fff;
+        font-size: 18px;
+    }
+    .news-row-container .r1 h2, .r2 h2{
+        margin-bottom: 24px;
+    }
+    
+    .row .text div button:hover{
+        background-color: #3db166;
+        cursor: pointer;
+    }
+    
+    
+    .contact .container .map{
+        flex: 1 1 20rem;
+        margin: px;
+        display: flex;
+        align-items: center;
+        
+        padding: 15px 15px;
+       
+    }
+    .contact .container .map iframe{
+        height: 50vh;
+       border-radius: 6px;
+       width: 100%;
+    }
+    .contact .container .sign-in{
+        flex: 1 1 25rem;
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        margin-right: 10px;
+       
+    }
+    .inputBox input{
+        width: 350px;
+        height: 60px;
+        margin-right: 5px;
+        
+    }
+    .inputBox span{
+        font-size: 30px;
+        color: #b6b1b1;
+        margin-right: 5px;
+    }
+    .contact .container .button{
+        flex: 1 1 23rem;
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .contact .container .button button{
+        background-color: var(--sky-blue);
+        border: none;
+        padding: 9px 40px;
+        font-size: 29px;
+        border-radius: 4px; 
+        cursor: pointer;
+        margin-right: 90px;
+        margin-bottom: 20px;
+        margin-top: 15px;
+    }
+    input::-webkit-input-placeholder{
+        padding-right: 10px;
+        font-size: 20px;
+        border: none;
+    }
+    /* table/////////////////////////////////table/////////////////////*/
+    .tables .container .table img{
+        height: 280px;
+      }
+      /*bransh-/////////////////////////bransh111111///////////*/
+      .about-bransh .container .image{
+        flex: 1 1 20rem;
+        height: 400px;
+        width: 600px;
+    }
+    .about-bransh .container .image:hover{
+        animation-name: glow;
+        animation-duration: 3s;
+    }
+    .about-bransh .container .image img{
+        height: 100%;
+        width: 92%;
+        margin: 1rem;
+        border-radius: 10px;
+    }
+    
+    .about-bransh .container .text{
+        flex: 1 1 20rem;
+        text-align: center;
+        padding: 2rem 2rem;
+    }
+    .about-bransh .container:hover{
+        animation-name: glow;
+        animation-duration: 3s;
+    }
+    .about-bransh .container .text i{
+       font-size: 50px;
+       color: #868484;
+    }
+    .about-bransh .container .text h2{
+        margin-top: 0.5rem;
+        font-size: 34px;
+        color: #666262;
+    }
+    .about-bransh .container .text p{
+        font-size: 30px;
+        margin-top: 0rem;
+        line-height: 40px;
+        
+    }
+
+
+
+
+      /*bransh-2     ///////     bransh-2///////////////////////////////////*/
+      .bransh-2 .container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .bransh-2 .container .image{
+        flex: 1 1 20rem;
+        padding-right: 1rem;
+        
+       
+    }
+    
+    .bransh-2 .container .image img{
+      height: 350px;
+      width: 95%;
+    }
+    .bransh-2 .container:hover{
+        animation-name: glom;
+        animation-duration: 3s;
+    }
+    .bransh-2 .container .image:hover{
+        animation-name: glom;
+        animation-duration: 3s;
+    }
+    
+    .bransh-2 .container .text{
+        flex: 1 1 25rem;
+        padding: 0rem 1rem;
+    }
+    
+    .bransh-2 .container .text i{
+       font-size: 50px;
+       color: #868484;
+       margin-top: 2rem;
+    }
+    .bransh-2 .container .text h2{
+        margin-top: 1.5rem;
+        font-size: 34px;
+        color: #666262;
+    }
+    .bransh-2 .container .text p{
+        margin: 0;
+        padding: 0;
+        
+        
+    }
+    /*bransh-3///////////////////////////////////bransh-3*/
+    .bransh-3 .container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0rem;
+        margin-top: 0rem;
+    }
+    
+    .bransh-3 .container .image{
+        flex: 1 1 20rem;
+        height: 400px;
+        width: 600px;
+    }
+    .bransh-3 .container:hover{
+        animation-name: glow;
+        animation-duration: 3s;
+    }
+    .bransh-3 .container .image:hover{
+        animation-name: glow;
+        animation-duration: 3s;
+    }
+    .bransh-3 .container .image img{
+        height: 85%;
+        width: 92%;
+        margin-right: 1rem;
+        border-radius: 10px;
+    }
+    
+    .bransh-3 .container .text{
+        flex: 1 1 20rem;
+        text-align: center;
+        padding: 0rem 1rem;
+    }
+    .bransh-3 .container .text i{
+       font-size: 50px;
+       color: #868484;
+    }
+    .bransh-3 .container .text h2{
+        margin-top: 1rem;
+        font-size: 34px;
+        color: #666262;
+    }
+    .bransh-3 .container .text ul{
+        padding: 0 1rem;
+    }
+    .bransh-3 .container .text li{
+        font-size: 22px;
+        margin-top: 0.2rem;
+        list-style: disc;
+        
+    }
+}
